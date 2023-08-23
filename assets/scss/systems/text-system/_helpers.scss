@@ -1,0 +1,29 @@
+:root {
+  @each $text-type, $text-bp in $text {
+    @each $bp-key, $properties in $text-bp {
+      @each $property, $property-value in $properties {
+        --#{$text-type}-#{$bp-key}__#{$property}: #{$property-value};
+      }
+    }
+  }
+}
+
+@each $text-type, $text-bp in $text {
+  @each $bp-key, $properties in $text-bp {
+    .#{$text-type}-#{$bp-key} {
+      @each $property, $property-value in $properties {
+        #{$property}: var(--#{$text-type}-#{$bp-key}__#{$property});
+      }
+
+      @each $breakpoint, $breakpoint-value in $grid-breakpoints {
+        &_#{$breakpoint} {
+          @include media-breakpoint-up($breakpoint) {
+            @each $property, $property-value in $properties {
+              #{$property}: var(--#{$text-type}-#{$bp-key}__#{$property});
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+:root {
+  @each $shadow-type, $shadow-value in $shadow {
+    --shadow-#{$shadow-type}: #{$shadow-value};
+  }
+}
+
+@each $shadow-type, $shadow-value in $shadow {
+  .shadow-#{$shadow-type} {
+    box-shadow: var(--shadow-#{$shadow-type});
+
+    @each $breakpoint, $breakpoint-value in $grid-breakpoints {
+      &_#{$breakpoint} {
+        @include media-breakpoint-up($breakpoint) {
+          box-shadow: var(--shadow-#{$shadow-type});
+        }
+      }
+    }
+  }
+}

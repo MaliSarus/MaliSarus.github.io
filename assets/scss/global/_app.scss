@@ -1,0 +1,56 @@
+* {
+  font-family: "Roboto", sans-serif !important;
+  box-sizing: border-box;
+}
+
+.content {
+  > :first-child {
+    margin-top: 0 !important;
+  }
+
+  > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+input {
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  > section {
+    margin: 80px 0;
+    @include media-breakpoint-up(md) {
+      margin: 108px 0;
+    }
+    @include media-breakpoint-up(lg) {
+      margin: 136px 0;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  padding-bottom: 40px;
+}
+
+external-quiz {
+  .external-quiz {
+    .v-btn {
+      display: none;
+    }
+  }
+}

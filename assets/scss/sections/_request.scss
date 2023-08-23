@@ -1,0 +1,49 @@
+.request-section {
+  &__title {
+    margin-bottom: var(--space-6);
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--space-7);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: var(--space-8);
+    }
+  }
+  &__content {
+    ol {
+      list-style: decimal;
+      padding-left: 20px;
+      li {
+        padding-left: 10px;
+        @include media-breakpoint-up(md) {
+          padding-left: var(--space-3);
+        }
+        &::marker {
+          font-size: var(--text-m-semibold__font-size);
+          font-weight: var(--text-m-semibold__font-weight);
+          line-height: var(--text-m-semibold__line-height);
+          color: var(--disabled-text-color);
+          @include media-breakpoint-up(md) {
+            font-size: var(--text-l-semibold__font-size);
+            font-weight: var(--text-l-semibold__font-weight);
+            line-height: var(--text-l-semibold__line-height);
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: var(--space-3);
+        }
+      }
+    }
+  }
+  &__controls {
+    text-align: right;
+    margin-top: var(--space-6);
+    @include media-breakpoint-up(sm) {
+      margin-top: 0;
+    }
+    .button {
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+}

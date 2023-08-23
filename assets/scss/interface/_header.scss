@@ -1,0 +1,41 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-light-color);
+  z-index: 10;
+  box-shadow: var(--shadow-s);
+  &__block {
+    padding: var(--space-4) 0;
+    @include media-breakpoint-up(sm) {
+      padding: var(--space-5) 0;
+    }
+    @include media-breakpoint-up(md) {
+      padding: var(--space-6) 0;
+    }
+  }
+  &__logo {
+    img {
+      width: 133px;
+      height: 36px;
+      @include media-breakpoint-up(sm) {
+        width: 172px;
+        height: 48px;
+      }
+      @include media-breakpoint-up(md) {
+        width: 199px;
+        height: 56px;
+      }
+    }
+  }
+  &__right {
+    > p {
+      width: 158px;
+      @include media-breakpoint-up(md) {
+        width: 181px;
+      }
+      ~ .button {
+        margin-left: 28px;
+      }
+    }
+  }
+}

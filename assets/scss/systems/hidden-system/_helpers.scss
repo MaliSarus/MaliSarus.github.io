@@ -1,0 +1,80 @@
+.hidden-xxs-only {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+.hidden-xs-only {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+.hidden-xs-and-up {
+  @include media-breakpoint-up(sm) {
+    display: none !important;
+  }
+}
+.hidden-sm-only {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+.hidden-sm-and-down {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+.hidden-sm-and-up {
+  @include media-breakpoint-up(sm) {
+    display: none !important;
+  }
+}
+.hidden-md-only {
+  @include media-breakpoint-between(sm, md) {
+    display: none !important;
+  }
+}
+.hidden-md-and-down {
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+}
+.hidden-md-and-up {
+  @include media-breakpoint-up(md) {
+    display: none !important;
+  }
+}
+.hidden-lg-only {
+  @include media-breakpoint-between(md, lg) {
+    display: none !important;
+  }
+}
+.hidden-lg-and-down {
+  @include media-breakpoint-down(lg) {
+    display: none !important;
+  }
+}
+.hidden-lg-and-up {
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+}
+.hidden-xl-only {
+  @include media-breakpoint-between(lg, xl) {
+    display: none !important;
+  }
+}
+.hidden-xl-and-up {
+  @include media-breakpoint-up(xl) {
+    display: none !important;
+  }
+}
+.hidden-xl-and-down {
+  @include media-breakpoint-down(xl) {
+    display: none !important;
+  }
+}
+.hidden-xxl-and-down {
+  @include media-breakpoint-down(xxl) {
+    display: none !important;
+  }
+}
