@@ -1,0 +1,9 @@
+.map-section {
+  margin-bottom: 0 !important;
+  #map {
+    height: 400px;
+    @include media-breakpoint-up(md) {
+      height: 720px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .hero-section {
   margin-top: -72px !important;
   position: relative;
-  isolation: isolate;
+  // isolation: isolate;
   padding-top: calc(var(--space-7) + 72px);
   padding-bottom: var(--space-7);
   @include media-breakpoint-up(sm) {
