@@ -1,0 +1,76 @@
+.input-item {
+  --input-item--label__color: var(--text-tertiary-color);
+  --input-item--label__font-size: var(--text-m__font-size);
+  --input-item--label__font-weight: var(--text-m__font-weight);
+  --input-item--label__line-height: var(--text-m__line-height);
+
+  --input-item--subtext__color: var(--dark-gray);
+  --input-item--subtext__font-size: var(--text-xs__font-size);
+  --input-item--subtext__font-weight: 400;
+  --input-item--subtext__line-height: var(--text-xs__line-height);
+
+  --input-item--error__color: var(--error-color);
+  --input-item--error__font-size: var(--input-item--subtext__font-size);
+  --input-item--error__font-weight: var(--input-item--subtext__font-weight);
+  --input-item--error__line-height: var(--input-item--subtext__line-height);
+
+  &.is-error {
+    .input-item {
+      &__content {
+        margin-bottom: var(--space-2);
+
+        .input {
+          --input__border-color: var(--error-color);
+          --input-hover__border-color: var(--error-color);
+          --input-focus__border-color: var(--error-color);
+        }
+        .select {
+          --select__border-color: var(--error-color);
+          --select-hover__border-color: var(--error-color);
+          --select-focus__border-color: var(--error-color);
+        }
+      }
+      &__subtext {
+        display: none;
+      }
+      &__error {
+        display: flex;
+        svg {
+          flex-shrink: 0;
+          margin-right: var(--space-1);
+        }
+      }
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    display: block;
+    color: var(--input-item--label__color);
+    font-size: var(--input-item--label__font-size);
+    font-weight: var(--input-item--label__font-weight);
+    line-height: var(--input-item--label__line-height);
+  }
+  &__label-text {
+    margin-bottom: var(--space-2);
+  }
+  &__content {
+    margin: var(--space-3) 0;
+    margin-bottom: 0;
+  }
+  &__subtext {
+    margin-top: var(--space-2);
+    color: var(--input-item--subtext__color);
+    font-size: var(--input-item--subtext__font-size);
+    font-weight: var(--input-item--subtext__font-weight);
+    line-height: var(--input-item--subtext__line-height);
+  }
+  &__error {
+    margin-top: var(--space-2);
+    color: var(--input-item--error__color);
+    font-size: var(--input-item--error__font-size);
+    font-weight: var(--input-item--error__font-weight);
+    line-height: var(--input-item--error__line-height);
+    display: none;
+  }
+}
